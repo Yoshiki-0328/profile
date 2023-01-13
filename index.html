@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lora:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="site-title">
+          <a href="#">My Profile</a>
+        </h1>
+        <nav class="navi">
+          <ul class="navi-list flex">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-visual">
+        <img src="./img/mainvisual.jpg" alt="メイン画像" />
+      </div>
+
+      <section class="section about" id="about">
+        <div class="wrapper">
+          <h2 class="section-title">About</h2>
+          <div class="flex content about-content">
+            <img src="img/icon.jpg" alt="アイコン">
+            <div class="descripiton">
+                <p class="name">Yoshiko</p>
+                <p>〇〇県出身、社会人〇年、〇〇歳。<br>
+                    新卒で日経大手SIerに就職、〇年間法人営業として活動し、公共領域の既存ビジネスの深耕、拡大に従事。<br>
+                    〇年目にエンジニアにジョブチェンジし、現在は、SaaSサービスの拡販・導入部隊に所属。
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="wrapper">
+          <h2 class="section-title">Skills</h2>
+          <div class="content skills-content">
+            <ul class="flex skills-flex">
+                <li class="col-3">
+                    <img src="./img/html.png" alt="html">
+                    <p>学習期間：6か月</p>
+                </li>
+                <li class="col-3">
+                    <img src="./img/css.png" alt="css">
+                    <p>学習期間：6か月</p>
+                </li>
+                <li class="col-3">
+                    <img src="./img/js.png" alt="js">
+                    <p>学習期間：2か月</p>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="wrapper">
+          <h2 class="section-title">Portfolio</h2>
+          <div class="content portfolio-content">
+            <ul>
+                <li><a href="../javascript/クイズゲーム/index.html">クイズゲーム</a></li>
+                <li><a href="../javascript/アコーディオンメニュー/index.html">アコーディオンメニュー</a></li>
+                <li><a href="../javascript/タブメニュー/index.html">タブメニュー</a></li>
+                <li><a href="../isara/index.html">イサラサイト</a></li>
+                <li><a href="../javascript/電卓/index.html">電卓</a></li>                
+                <li><a href="#">動画キャプチャ</a></li>                
+                <li><a href="../javascript/QRコード生成/index.html">QRコード生成(QRious.js)</a></li>                
+                <li><a href="#">パスワード強度チェック</a></li>                
+                <li><a href="../javascript/ブロック崩し/index.html">ブロック崩し</a></li>                
+                <li><a href="../javascript/タイマー/index.html">時計（現在時刻/ストップウォッチ/タイマー）</a></li>                
+                <li><a href="../javascript/通貨変換/index.html">通貨変換</a></li>                
+                <li><a href="#">キーボード</a></li>                
+              </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="wrapper">
+          <h2 class="section-title">contact</h2>
+          <div class="content contact-content">
+            <form action="#" class="flex form-flex">
+                <dt>NAME</dt>
+                <dd><input type="text" name="name" id="name"></dd>
+                <dt>E-mail</dt>
+                <dd><input type="email" name="email" id="email"></dd>
+                <dt>MESSAGE</dt>
+                <dd><textarea name="message" id="message" cols="30" rows="10"></textarea></dd>
+            </form>
+            <button type="submit">送信</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+        <ul class="flex footer-flex">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <small>&copy;2022 Yoshiki</small>
+    </div>
+
+    <div class="back-scroll hidden" id="js-topBtn"></div>
+
+    </footer>
+
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>

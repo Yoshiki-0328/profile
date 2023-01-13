@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lora:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+body {
+  font-family: "Crimson Text", serif;
+  font-family: "Lora", serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 100%;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*------------------------------------------------- ---------
+header-------------------------------------------------------
+------------------------------------------------------------*/
+.header {
+  background-color: white;
+  padding: 20px 0 10px;
+}
+.header-inner {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navi-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navi-list li {
+  font-size: 1.25rem;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+  transition: all 0.3s;
+}
+
+.navi-list li:hover {
+  color: #999;
+}
+
+.navi-list li::before {
+  content: "";
+  background-color: #999;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.navi-list li:hover::before {
+  transform: translateX(0%);
+}
+
+/*------------------------------------------------- ---------
+main-------------------------------------------------------
+------------------------------------------------------------*/
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col-3 {
+  width: 30%;
+}
+/*------------------------------------------------- ---------
+mainvisual-------------------------------------------------------
+------------------------------------------------------------*/
+.main-visual {
+  width: 100%;
+}
+
+.main-visual img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+/*------------------------------------------------- ---------
+About-------------------------------------------------------
+------------------------------------------------------------*/
+.section {
+  padding: 80px 0;
+}
+.wrapper {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 3px solid #333;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.about-content img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0px #999;
+}
+
+.about-content .descripiton {
+  text-align: left;
+  width: calc(100% - 200px);
+}
+
+.about-content .name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/*------------------------------------------------- ---------
+skills-------------------------------------------------------
+------------------------------------------------------------*/
+.skills-content {
+  padding: 0 15%;
+}
+.skills-content .col-3 img {
+  object-fit: contain;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.skills-content p {
+  font-weight: bold;
+}
+/*------------------------------------------------- ---------
+portfolio-------------------------------------------------------
+------------------------------------------------------------*/
+.portfolio-content {
+  padding: 0 15%;
+}
+
+.portfolio-content li {
+  text-align: left;
+  padding: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px 0px #999;
+}
+
+/*------------------------------------------------- ---------
+contact-------------------------------------------------------
+------------------------------------------------------------*/
+.form-flex {
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+}
+
+.form-flex dt {
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.form-flex dd {
+  text-align: left;
+  width: 75%;
+  margin-bottom: 15px;
+}
+.contact-content input,
+.contact-content textarea {
+  border: 1px solid #999;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #333;
+  border: 3px solid #333;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+/*------------------------------------------------- ---------
+footer-------------------------------------------------------
+------------------------------------------------------------*/
+.footer {
+  background-color: #999;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-flex {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-flex li {
+  margin-left: 20px;
+}
+
+.footer-flex a {
+  text-decoration: underline;
+}
+
+.back-scroll {
+  background-color: #999;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-scroll::before {
+  content: "";
+  border-bottom: 15px solid white;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 2;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+/*------------------------------------------------- ---------
+Resiponsive-------------------------------------------------------
+------------------------------------------------------------*/
+@media (max-width: 520px) {
+  body {
+    padding: 5px;
+  }
+  /* header--------
+-------------- */
+  .header {
+    padding: 20px 0 10px;
+  }
+  .header-inner {
+    width: 90%;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .navi-list li {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  .navi-list li::before {
+    height: 1px;
+  }
+  /* mainvisual----
+--------------- */
+  .main-visual img {
+    height: 60vh;
+  }
+  /* about-------
+-------------- */
+  .section {
+    padding: 50px 0;
+  }
+  .wrapper {
+    width: 80%;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .about-content .descripiton {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+  /* skkils-------
+-------------- */
+  .skills-content p {
+    font-size: 0.75rem;
+  }
+  .skills-content {
+    padding: 0 5%;
+  }
+  /* portfolio-------
+-------------- */
+  .portfolio-content {
+    padding: 0 5%;
+  }
+  .portfolio-content li {
+    font-size: 1rem;
+  }
+  /* contact-------
+-------------- */
+  .form-flex {
+    font-size: 1rem;
+  }
+}
