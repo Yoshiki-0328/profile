@@ -30,6 +30,9 @@ $clickBtns.forEach(clickBtn =>{
             top:targetY,
             behavior:"smooth"
         });
+        // 押されたらハンバーガーメニューを閉じる
+        $hamber.classList.remove('open');
+        $navi.classList.remove('open');
     });
 });
 
