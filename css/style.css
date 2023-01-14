@@ -25,18 +25,15 @@ header-------------------------------------------------------
   justify-content: space-between;
   align-items: center;
 }
-
 .site-title {
   font-size: 2.5rem;
   font-weight: bold;
 }
-
 .navi-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .navi-list li {
   font-size: 1.25rem;
   margin-left: 20px;
@@ -45,11 +42,9 @@ header-------------------------------------------------------
   padding-bottom: 5px;
   transition: all 0.3s;
 }
-
 .navi-list li:hover {
   color: #999;
 }
-
 .navi-list li::before {
   content: "";
   background-color: #999;
@@ -60,11 +55,9 @@ header-------------------------------------------------------
   transform: translateX(-100%);
   transition: all 0.3s;
 }
-
 .navi-list li:hover::before {
   transform: translateX(0%);
 }
-
 /*------------------------------------------------- ---------
 main-------------------------------------------------------
 ------------------------------------------------------------*/
@@ -82,7 +75,6 @@ mainvisual-------------------------------------------------------
 .main-visual {
   width: 100%;
 }
-
 .main-visual img {
   width: 100%;
   height: 80vh;
@@ -114,12 +106,10 @@ About-------------------------------------------------------
   border-radius: 50%;
   box-shadow: 0 0 3px 0px #999;
 }
-
 .about-content .descripiton {
   text-align: left;
   width: calc(100% - 200px);
 }
-
 .about-content .name {
   font-weight: bold;
   margin-bottom: 10px;
@@ -136,7 +126,6 @@ skills-------------------------------------------------------
   height: 150px;
   margin-bottom: 20px;
 }
-
 .skills-content p {
   font-weight: bold;
 }
@@ -146,7 +135,6 @@ portfolio-------------------------------------------------------
 .portfolio-content {
   padding: 0 15%;
 }
-
 .portfolio-content li {
   text-align: left;
   padding: 10px;
@@ -155,7 +143,6 @@ portfolio-------------------------------------------------------
   margin-bottom: 10px;
   box-shadow: 0 0 3px 0px #999;
 }
-
 /*------------------------------------------------- ---------
 contact-------------------------------------------------------
 ------------------------------------------------------------*/
@@ -163,12 +150,10 @@ contact-------------------------------------------------------
   flex-wrap: wrap;
   font-size: 1.25rem;
 }
-
 .form-flex dt {
   width: 25%;
   margin-bottom: 10px;
 }
-
 .form-flex dd {
   text-align: left;
   width: 75%;
@@ -181,7 +166,6 @@ contact-------------------------------------------------------
   padding: 10px;
   border-radius: 3px;
 }
-
 button {
   background-color: #333;
   border: 3px solid #333;
@@ -192,7 +176,6 @@ button {
   margin-top: 30px;
   transition: all 0.5s;
 }
-
 button:hover {
   transform: scale(1.05);
 }
@@ -204,20 +187,16 @@ footer-------------------------------------------------------
   color: white;
   padding: 20px 0;
 }
-
 .footer-flex {
   justify-content: center;
   margin-bottom: 20px;
 }
-
 .footer-flex li {
   margin-left: 20px;
 }
-
 .footer-flex a {
   text-decoration: underline;
 }
-
 .back-scroll {
   background-color: #999;
   width: 50px;
@@ -230,7 +209,6 @@ footer-------------------------------------------------------
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .back-scroll::before {
   content: "";
   border-bottom: 15px solid white;
@@ -242,7 +220,6 @@ footer-------------------------------------------------------
   transform: translate(-50%, -60%);
   z-index: 2;
 }
-
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -265,13 +242,69 @@ Resiponsive-------------------------------------------------------
   .site-title {
     font-size: 1.5rem;
   }
-  .navi-list li {
-    font-size: 0.9rem;
-    margin-left: 10px;
+  /* hambermenu------ */
+  .navi{
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    background-color:#333;
+    position: fixed;
+    top: 0;
+    left: -40%;
+    transition: all .5s;
   }
-  .navi-list li::before {
-    height: 1px;
+  .navi-list{
+    color: white;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left:50%;
+    transform: translate(-50%,-50%);
   }
+  .navi-list li{
+    margin-bottom: 30px;
+  }
+  .hamber{
+    width: 30px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  .hamber span{
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all .5s;
+  }
+  .hamber span:nth-of-type(1){
+    top: 10px;
+  }
+  .hamber span:nth-of-type(2){
+    top: 20px;
+  }
+  .hamber span:nth-of-type(3){
+    top: 30px;
+  }
+  /* hambermenu open------ */
+  .open.navi{
+    left: 0;
+  }
+  .open.hamber span:nth-of-type(1){
+    top: 20px;
+    transform: rotate(45deg);
+  }
+  .open.hamber span:nth-of-type(2){
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .open.hamber span:nth-of-type(3){
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+
   /* mainvisual----
 --------------- */
   .main-visual img {

@@ -1,8 +1,7 @@
 'USE STRICT';
 
 const $topBtn = document.getElementById('js-topBtn');
-
-// スクロールボタンの表示・非表示
+// スクロールトップボタンの表示・非表示
 window.addEventListener('scroll',()=>{
     if(window.pageYOffset>500){
         $topBtn.classList.remove('hidden');
@@ -19,17 +18,13 @@ $topBtn.addEventListener('click',()=>{
     });
 });
 
-
 const $clickBtns = document.querySelectorAll('.flex li a');
-console.log($clickBtns);
-
 // 押した項目の位置を取得し、スクロールする
 $clickBtns.forEach(clickBtn =>{
     clickBtn.addEventListener('click',(e)=>{
         e.preventDefault();
         const targetId = clickBtn.hash;
         const targetElement = document.querySelector(targetId);
-        
         const targetY =window.pageYOffset + targetElement.getBoundingClientRect().top;
         window.scrollTo({
             top:targetY,
@@ -37,3 +32,12 @@ $clickBtns.forEach(clickBtn =>{
         });
     });
 });
+
+// ハンバーガーメニュー
+const $hamber = document.getElementById('hamber');
+const $navi = document.getElementById('navi');
+$hamber.addEventListener('click',(e)=>{
+    console.log($hamber);
+    $hamber.classList.toggle('open');
+    $navi.classList.toggle('open');
+})
